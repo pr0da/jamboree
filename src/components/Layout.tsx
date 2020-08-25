@@ -14,7 +14,9 @@ const Layout: React.FC = props => {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      <main className="container mx-auto">{children}</main>
+      <main className="container mx-auto">
+        <article className="prose">{children}</article>
+      </main>
     </>
   )
 }

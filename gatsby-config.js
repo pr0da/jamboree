@@ -6,7 +6,18 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: ['gatsby-plugin-postcss', 'gatsby-plugin-react-helmet'],
+  plugins: [
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/Layout.tsx'),
+        },
+      },
+    },
+  ],
   siteMetadata: {
     title: 'FM Gatsby Workshop',
     description:

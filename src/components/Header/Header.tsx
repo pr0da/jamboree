@@ -37,6 +37,7 @@ const Header: React.FC = () => {
           <div className="text-sm lg:flex-grow">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </div>
         </div>
       </nav>
