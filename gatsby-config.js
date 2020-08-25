@@ -6,5 +6,10 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: ['gatsby-plugin-postcss'],
+  plugins: ['gatsby-plugin-postcss', 'gatsby-plugin-react-helmet'],
+  siteMetadata: {
+    title: 'FM Gatsby Workshop',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate sequi odit libero praesentium, voluptas at consequatur dignissimos? Voluptas blanditiis repellendus omnis! Iste dolore nihil aperiam? Nemo possimus accusantium natus eaque.',
+  },
 }
