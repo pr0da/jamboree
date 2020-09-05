@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
+import { FluidObject } from 'gatsby-image'
 
 interface RawPost {
   excerpt: string
@@ -6,6 +7,11 @@ interface RawPost {
     title: string
     slug: string
     author: string
+    image: {
+      sharp: {
+        fluid: FluidObject
+      }
+    }
   }
 }
 
@@ -20,6 +26,11 @@ export interface Post {
   title: string
   slug: string
   author: string
+  image: {
+    sharp: {
+      fluid: FluidObject
+    }
+  }
 }
 
 const usePosts = (): Post[] => {
@@ -32,6 +43,17 @@ const usePosts = (): Post[] => {
             title
             slug
             author
+            image {
+              sharp: childImageSharp {
+                fluid(
+                  maxWidth: 100
+                  maxHeight: 100
+                  duotone: { shadow: "#663399", highlight: "#ddbbff" }
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
         }
       }

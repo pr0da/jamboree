@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Hero />
       <Layout>
-        <h2>Read my blog</h2>
+        <h2 className="text-4xl my-6 font-bold">Read my blog</h2>
         {posts.map(post => (
           <PostPreview key={post.slug} {...{ post }} />
         ))}

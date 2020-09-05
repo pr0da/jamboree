@@ -36,10 +36,12 @@ const Post: React.FC<PostProps> = props => {
   const post = data.mdx
   return (
     <Layout>
-      <h1>{post.frontmatter.title}</h1>
-      <p className="text-xs">Posted by ({post.frontmatter.author})</p>
-      <MDXRenderer>{post.body}</MDXRenderer>
-      <ReadLink to="/">&larr; back to all posts</ReadLink>
+      <article className="prose">
+        <h1>{post.frontmatter.title}</h1>
+        <p className="text-xs">Posted by ({post.frontmatter.author})</p>
+        <MDXRenderer>{post.body}</MDXRenderer>
+        <ReadLink to="/">&larr; back to all posts</ReadLink>
+      </article>
     </Layout>
   )
 }
