@@ -38,6 +38,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        username: 1659332099,
+      },
+    },
   ],
   siteMetadata: {
     title: 'FM Gatsby Workshop',
