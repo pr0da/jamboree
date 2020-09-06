@@ -44,6 +44,15 @@ module.exports = {
         username: 1659332099,
       },
     },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        production: true,
+        disable: !process.env.ANALYZE_BUNDLE_SIZE,
+        generateStatFile: true,
+        analyzerMode: 'static',
+      },
+    },
   ],
   siteMetadata: {
     title: 'FM Gatsby Workshop',

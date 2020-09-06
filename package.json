@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
+    "analyze": "ANALYZE_BUNDLE_SIZE=true yarn build",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
@@ -33,6 +34,7 @@
     "gatsby-plugin-postcss": "^2.3.11",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.31",
+    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "gatsby-source-filesystem": "^2.3.25",
     "gatsby-transformer-sharp": "^2.5.14",
     "prettier": "2.0.5",
